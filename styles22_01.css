@@ -7,6 +7,17 @@ body {
     background-color: rgb(136, 181, 207);
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(121, 112, 112);
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(32, 25, 53);
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -30,41 +41,41 @@ body {
     align-items: center;
 }
 
-#header {
+.header {
     background-color: rgb(50, 57, 94);
-    color: rgb(180, 153, 153);
     height: 500px;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-#header_h3 {
+.header>h2,
+h3,
+h5 {
+    color: rgb(180, 153, 153);
     text-align: center;
-    margin: 100px auto 10px;
     border-radius: 10px;
     background-color: rgb(110, 68, 224);
 }
 
-#header_h5 {
-    text-align: center;
-    margin: 20px auto;
-    border-radius: 10px;
-    background-color: rgb(110, 68, 224);
-}
-
-#header_h2 {
-    text-align: center;
-    margin: 20px auto;
-    border-radius: 10px;
-    background-color: rgb(110, 68, 224);
+.justify-content-center {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 #header_box_row {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 75px;
     position: relative;
+}
+
+.align-self-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -77,14 +88,6 @@ body {
 
 #main {
     padding-top: 150px;
-    color: rgb(180, 153, 153);
-}
-
-#main > h4 {
-    text-align: center;
-    margin: 100px auto 10px;
-    border-radius: 10px;
-    background-color: rgb(110, 68, 224);
 }
 
 .cards {
@@ -94,18 +97,88 @@ body {
     margin-top: 30px;
 }
 
-.main_row_h5 {
+.box_large {
+    height: 200px;
+    width: 600px;
+    background-color: rgb(110, 68, 224);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.col-lg-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-   
 }
 
-.main_row_h5 > .col > h6 {
-    width: 50%;
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
+.scroll_box1 {
+    height: 150px;
+    width: 300px;
     background-color: rgb(110, 68, 224);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.scroll_box2 {
+    height: 150px;
+    width: 300px;
+    background-color: rgb(224, 68, 164);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.scroll_box3 {
+    height: 150px;
+    width: 300px;
+    background-color: rgb(68, 224, 68);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.photo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.box4 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(110, 68, 224);
+    border-radius: 200px;
+    margin: 20px;
+}
+
+.photo_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: rgb(50, 57, 94);
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_box_row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box5 {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(110, 68, 224);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.box6 {
+    height: 5px;
+    width: 80px;
+    background-color: rgb(110, 68, 224);
+    border-radius: 10px;
+    margin: 20px;
 }
