@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(136, 181, 207);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo>img {
+    height: 50px;
+    width: 50px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#header {
+    background-color: rgb(50, 57, 94);
+    color: rgb(180, 153, 153);
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#header_h3 {
+    text-align: center;
+    margin: 100px auto 10px;
+    border-radius: 10px;
+    background-color: rgb(110, 68, 224);
+}
+
+#header_h5 {
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgb(110, 68, 224);
+}
+
+#header_h2 {
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgb(110, 68, 224);
+}
+
+#header_box_row {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(110, 68, 224);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+#main {
+    padding-top: 150px;
+    color: rgb(180, 153, 153);
+}
+
+#main > h4 {
+    text-align: center;
+    margin: 100px auto 10px;
+    border-radius: 10px;
+    background-color: rgb(110, 68, 224);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.main_row_h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.main_row_h5 > .col > h6 {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(110, 68, 224);
+}
