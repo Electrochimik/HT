@@ -94,9 +94,9 @@
 }
 
 /* !!!!!!!!!!!! Чому це не працює???? */
-.main_header_content_left p :last-child {
-    /* font-family: 'Montserrat'; */
-    font-size: bold;
+.main_header_content_left_p2 {
+    font-family: 'Montserrat';
+    font-weight:bold;
     margin-top: 40px;
 }
 
