@@ -25,7 +25,6 @@
     list-style-type: none;
     display: flex;
     column-gap: 30px;
-    /* font-family: 'Montserrat'; */
     font-size: 16px;
     font-weight: 500;
     line-height: 19.5px;
@@ -51,6 +50,66 @@
     background-color: transparent;
 }
 
+.nav_header_button_mobile {
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav_header_button_mobile span {
+    width: 48px;
+    height: 7px;
+    background-color: #3298f2;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color .3s;
+}
+
+.nav_header_button_mobile span::before,
+.nav_header_button_mobile span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: #3298f2;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.nav_header_button_mobile span::before {
+    top: -15px;
+    transition-property: top, transform;
+    transition-duration: .3s, .3s;
+    transition-delay: .3s, 0s;
+}
+
+.nav_header_button_mobile span::after {
+    bottom: -15px;
+    transition-property: bottom, transform;
+    transition-duration: .3s, .3s;
+    transition-delay: .3s, 0s;
+}
+
+.active span {
+    background: none;
+}
+
+.active.nav_header_button_mobile span::before {
+    transition-delay: 0s, .3s;
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.active.nav_header_button_mobile span::after {
+    transition-delay: 0s, .3s;
+    top: 0;
+    transform: rotate(-45deg);
+}
+
 .main_header_content {
     padding: 90px 100px 150px 245px;
     display: flex;
@@ -64,7 +123,6 @@
 
 .main_header_content_left h2 {
     color: #ff9638;
-    /* font-family: 'Montserrat'; */
     font-size: 19px;
     line-height: 23px;
     font-weight: 900;
@@ -73,9 +131,8 @@
 }
 
 .main_header_content_left h1 {
-    /* font-family: 'Montserrat'; */
-    font-size: 30px;
-    line-height: 37px;
+    font-size: 38px;
+    line-height: 39px;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 60px;
@@ -86,17 +143,15 @@
 }
 
 .main_header_content_left p {
-    /* font-family: 'Montserrat'; */
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;
     color: #333333;
 }
 
-/* !!!!!!!!!!!! Чому це не працює???? */
 .main_header_content_left_p2 {
     font-family: 'Montserrat';
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 40px;
 }
 
@@ -107,7 +162,6 @@
     border: none;
     border-radius: 6px;
     color: #292929;
-    /* font-family: 'Montserrat'; */
     font-size: 16px;
     font-weight: bold;
     line-height: 26px;
@@ -116,7 +170,7 @@
     overflow: hidden;
 }
 
-.main_header_content_left button::before{
+.main_header_content_left button::before {
     content: '';
     display: block;
     width: 50px;
@@ -132,75 +186,80 @@
 
 @keyframes xxx {
     0% {
-        left: -200px; 
+        left: -200px;
     }
+
     100% {
         left: 150%;
     }
 }
 
-.main_header_content_right{
+.main_header_content_right {
     width: 760px;
 }
 
-.main_header_content_right_title{
+.main_header_content_right_title {
     font-size: 202px;
     font-weight: 900;
     line-height: 246px;
-    text-transform: uppercase;   
-    background: linear-gradient(90deg,  #3298f2,  #ff9638);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #3298f2, #ff9638);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.main_header_content_right_school{
+.main_header_content_right_school {
     font-size: 168px;
     line-height: 205px;
     font-weight: 900;
     text-transform: uppercase;
-    color:white;
+    color: white;
     -webkit-text-stroke-color: #3298f2;
     -webkit-text-stroke-width: 2px;
 }
 
-.main_header_content_right_prog{
+.main_header_content_right_prog {
     font-size: 68px;
     font-weight: 900;
     line-height: 83px;
     text-transform: uppercase;
 }
-.button_play, .button_play_button, .button_play_button_play {
+
+.button_play,
+.button_play_button,
+.button_play_button_play {
     display: flex;
     justify-content: center;
-    align-items:center;    
+    align-items: center;
     border-radius: 50%;
 
 }
-.button_play{
+
+.button_play {
     width: 156px;
     height: 156px;
-    border: 1px solid  #ff9638;
+    border: 1px solid #ff9638;
     position: absolute;
-    bottom: 0px;   
+    bottom: 0px;
     left: 50%;
     margin-left: -78px;
 }
 
-.button_play_button{
+.button_play_button {
     width: 96px;
-    height: 96px;   
-    border: 2px solid  #ff9638;
+    height: 96px;
+    border: 2px solid #ff9638;
 }
 
-.button_play_button_play{
+.button_play_button_play {
     width: 82px;
-    height: 82px;   
-    border: 3px solid  #ff9638;
+    height: 82px;
+    border: 3px solid #ff9638;
     font-size: 25px;
     background-color: #c4c4c4;
-    color: #ffffff;   
+    color: #ffffff;
 }
 
-#fa-play{
+#fa-play {
     padding-left: 6px;
 }
