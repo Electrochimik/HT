@@ -255,7 +255,7 @@ compare_21 = 123 !== '123';
 console.log(compare_21);
 
 
-//// Add Task//
+// Add Task//
 console.log(132 > 100 && 45 < 12);                                          //1//
 console.log(34 > 33 && 23 < 90);                                            //2//
 console.log(99 > 100 && 45 > 12);                                           //3//
@@ -266,7 +266,7 @@ console.log((111 > 11 || 45 < 56) || (132 > 100 || 45 < 12));               //7/
 console.log((132 > 100 && 45 < 12) && (132 > 100 || 45 < 12));              //8//
 console.log((111 > 11 || 45 < 111) || (99 > 100 && 45 > 12));               //9//
 console.log(!!'-1');                                                        //10//     не понятно//
-console.log(!!-1);                                                          //11//    не понятно//
+console.log(!!-1);                                                          //11//     не понятно//
 console.log(!!'0');                                                         //12//
 console.log(!!'null');                                                      //13//
 console.log(!!'undefined');                                                 //14//
