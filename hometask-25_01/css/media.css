@@ -1,9 +1,20 @@
 @media screen and (max-width: 375px) {
 
-    .header {
-        padding: 0 22px;
+    body{
         overflow: hidden;
     }
+
+    .header {
+        padding: 0 22px;
+        /* overflow: hidden; */
+        position: relative;
+    }
+
+    /* .nav_header{
+        position: absolute;
+        left: 100%;
+        top: 91px;
+    } */
 
     .nav_header_logo {
         width: 200px;
@@ -95,5 +106,4 @@
         font-size: 30px;
         background-color:  #ff9638;        
     }
-
 }
