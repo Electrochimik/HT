@@ -29,7 +29,7 @@
 //     document.write(`<div class="some_text">${someText[i]}</div>`);
 // };
 
-// //За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+//За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 // for (let i = 0; i < someText.length; i++) {
 //     document.write(`<div class="some_text"> There ${i} word is ${someText[i]}</div>`);
 // };
@@ -135,5 +135,23 @@
 // };
 
 
-// Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+// // Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+// for (let minute = 0; minute <= 2; minute++) {
+//     for (let second = 0; second <= 59; second++) {
+//         console.log(minute, second);
+//     }
+// }
 
+
+
+// //Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+// for (let h = 0; h <= 2; h++) {
+//     for (let m = 0; m < 60; m++) {
+//         if (h === 2 && m === 21) break
+//         for (let s = 0; s < 60; s++) {
+//             document.write(`<div>${h}:${m}:${s}</div><br>`);
+//             if (m === 20 && s === 0) break
+//         }
+//     }
+// }
