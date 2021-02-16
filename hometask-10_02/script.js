@@ -640,73 +640,172 @@ let users = [{
 //     document.body.appendChild(div1);
 // }
 
-// - Дано 2 масиви з рівною кількістю об'єктів.
+// // - Дано 2 масиви з рівною кількістю об'єктів.
 
-let usersWithId = [{
-    id: 1,
-    name: 'vasya',
-    age: 31,
-    status: false
-},
-{
-    id: 2,
-    name: 'petya',
-    age: 30,
-    status: true
-},
-{
-    id: 3,
-    name: 'kolya',
-    age: 29,
-    status: true
-},
-{
-    id: 4,
-    name: 'olya',
-    age: 28,
-    status: false
-},
-];
+// let usersWithId = [{
+//     id: 1,
+//     name: 'vasya',
+//     age: 31,
+//     status: false
+// },
+// {
+//     id: 2,
+//     name: 'petya',
+//     age: 30,
+//     status: true
+// },
+// {
+//     id: 3,
+//     name: 'kolya',
+//     age: 29,
+//     status: true
+// },
+// {
+//     id: 4,
+//     name: 'olya',
+//     age: 28,
+//     status: false
+// },
+// ];
 
-let citiesWithId = [{
-    user_id: 3,
-    country: 'USA',
-    city: 'Portland'
-},
-{
-    user_id: 1,
-    country: 'Ukraine',
-    city: 'Ternopil'
-},
-{
-    user_id: 2,
-    country: 'Poland',
-    city: 'Krakow'
-},
-{
-    user_id: 4,
-    country: 'USA',
-    city: 'Miami'
-},
-];
-// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
-// Записати цей об'єкт в новий масив
-// Частковий приклад реультату:
-// let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
+// let citiesWithId = [{
+//     user_id: 3,
+//     country: 'USA',
+//     city: 'Portland'
+// },
+// {
+//     user_id: 1,
+//     country: 'Ukraine',
+//     city: 'Ternopil'
+// },
+// {
+//     user_id: 2,
+//     country: 'Poland',
+//     city: 'Krakow'
+// },
+// {
+//     user_id: 4,
+//     country: 'USA',
+//     city: 'Miami'
+// },
+// ];
+// // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id". Записати цей об'єкт в новий масив
+// // Частковий приклад реультату:
+// // let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
 
-
-
-
+// for (let user of usersWithId) {
+//     for (let city of citiesWithId) {
+//         if (user.id === city.user_id) {
+//             user.address = city;            
+//         }
+//     }
+// }
+// console.log(usersWithId)
 
 // - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу
 // - змінити цей текст використовуючи селектори id, class,  tag
+
+// let elementById = document.getElementById(`content`);
+// let innerText = elementById.innerText;
+// console.log(innerText)
+
+// let elementsByClassName = document.getElementsByClassName(`rules`);
+// for (let element of elementsByClassName) {
+//     element.innerText = `lorem`;
+//     console.log(element)
+// }
+
+// let elementsByTagName = document.getElementsByTagName(`h2`);
+// for (let element of elementsByTagName) {
+//     element.innerText = `lorem ipsum`;
+//     console.log(element)
+// }
 // - змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+
+// let elementId = document.getElementById(`content`);
+// let text = elementId.innerText;
+// elementId.innerText = `bla bla bla`;
+// elementId.style.width = `400px`;
+// elementId.style.height = `150px`;
+
+// let elementsByClassName = document.getElementsByClassName(`rules`);
+// for (let element of elementsByClassName) {
+//     element.style.width = `400px`;
+//     element.style.height = `150px`;    
+// }
+
+// let elementsByTagName = document.getElementsByTagName(`h2`);
+// for (let element of elementsByTagName) {   
+//     element.style.width = `400px`;
+//     element.style.height = `150px`
+// }
+
+
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+
+// let table = document.createElement(`table`);
+// let tr = document.createElement(`tr`);
+// let td = document.createElement(`td`);
+// let td2 = document.createElement(`td2`);
+// let td3 = document.createElement(`td3`);
+
+// tr.appendChild(td);
+// tr.appendChild(td2);
+// tr.appendChild(td3);
+
+// table.appendChild(tr);
+
+// document.body.appendChild(table)
+
 // - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+// let table = document.createElement(`table`);
+
+// for (let tr = 0; tr < 10; tr++) {
+//     let tr = document.createElement(`tr`);
+//     for (let td = 0; td < 3; td++) {
+//         let td = document.createElement(`td`);
+//         tr.appendChild(td);
+//     }
+//     table.appendChild(tr);
+// }
+// document.body.appendChild(table)
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+
+// let n = prompt('Яку кількість рядків в таблиці бажаєте?')
+// let m = prompt('Яку кількість комірок в рядку бажаєте?')
+// let table = document.createElement(`table`);
+// for (let tr = 0; tr < n; tr++) {
+//     let tr = document.createElement(`tr`);
+//     for (let td = 0; td < m; td++) {
+//         let td = document.createElement(`td`);
+//         tr.appendChild(td);
+//     }
+//     table.appendChild(tr);
+// }
+// document.body.appendChild(table)
 
 // --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
 //  - знайти всі елементі, які мають class
 //  - знайти всі параграфи ,та змінити текст на hello oktenweb!
 //  - знайти всі div та змінити ім колір на червоний
+
+// let element = document.getElementsByTagName(`*`);
+// for (let tag of element){
+//     if(tag.getAttribute(`class`)){
+//         console.log(tag);
+//     }
+// }
+
+// let element = document.getElementsByTagName(`p`);
+// for (let par of element) {
+//     par.innerText = `hello oktenweb!`
+// }
+
+// let element = document.getElementsByTagName(`div`);
+// for (let d of element) {
+//     d.style.backgroundColor = `red`
+// }
