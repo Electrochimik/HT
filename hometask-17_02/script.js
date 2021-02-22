@@ -407,38 +407,233 @@ let users = [
 // console.log(res);
 
 
-// - *** приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+// // - *** приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 
-let array = [11,22,33,44,55]
-function changeElement(array,index){
-    i
-}
+// let array = [11, 22, 33, 44, 55]
+// console.log(array);
+// function changeElement(array, index) {
+//     let arr = [...array];
+//     if (index < arr.length - 1) {
+//         let temp = arr[index];
+//         arr[index] = arr[index + 1];
+//         arr[index + 1] = temp;
+//     }
+//     return arr;
+// }
+// let change = changeElement(array, 3)
+// console.log(change);
 
 
+// // - *** створити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// // Двожина масиву від 2 до 100
+// // Приклад
+// // [1,0,6,0,3] => [1,6,3,0,0]
+// // [0,1,2,3,4] => [1,2,3,4,0]
+// // [0,0,1,0]   => [1,0,0,0]
+// function transfer(array) {
+//     let ar = [...array];
+//     for (let i = ar.length - 1; i >= 0; i--) {
+//         if (ar[i] === 0) {
+//             ar.splice(i, 1);
+//             ar.push(0);
+//         }
+//     }
+//     return ar;
+// }
+// console.log(transfer([1,0,6,0,3]));
+// console.log(transfer([0,1,2,3,4]));
+// console.log(transfer([0,0,1,0]));
 
 
+// // Створити функцію яка :
+// // - Додає в боді блок з текстом "Hello owu"
+// function add(msg) {
+//     let div = document.createElement("div");
+//     div.innerText = msg || `Hello World`;
+//     document.body.appendChild(div);
+// }
+// add("Hello owu")
 
 
+// // - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
+// function addWithTag(msg, tag) {
+//     let tag1 = document.createElement(tag);    
+//     tag1.innerHTML = msg || `Hello World`;
+//     document.body.appendChild(tag1);
+// }
+// addWithTag("Hello owu",`h1`)
 
 
-
-
-
-// - *** створити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
-// Двожина масиву від 2 до 100
-// Приклад
-// [1,0,6,0,3] => [1,6,3,0,0]
-// [0,1,2,3,4] => [1,2,3,4,0]
-// [0,0,1,0]   => [1,0,0,0]
-
-// Створити функцію яка :
-// - Додає в боді блок з текстом "Hello owu"
-// - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
+
+let carArray = [
+    {
+        id: 1,
+        model: `C_Two`,
+        producer: `Rimac`,
+        timeTo100Kmh: 1.97,
+        horsePover: 1941,
+        image: `https://media.fastestlaps.com/rimac-c-two.jpg`
+    },
+    {
+        id: 2,
+        model: `Divo`,
+        producer: `Bugatti`,
+        timeTo100Kmh: 2.4,
+        horsePover: 1500,
+        image: `https://topgearrussia.ru/data/topgear/preview/2018-08/27/image-b7ee8bb71535357997-1100x619.jpg`
+    },
+    {
+        id: 3,
+        model: `TSR-S`,
+        producer: `Zenvo`,
+        timeTo100Kmh: 2.8,
+        horsePover: 1194,
+        image: `https://www.carscoops.com/wp-content/uploads/2020/04/zenvo-tsr-s-0.jpg`
+    },
+    {
+        id: 4,
+        model: `Speedtail`,
+        producer: `McLaren`,
+        timeTo100Kmh: 2.7,
+        horsePover: 11050,
+        image: `https://bucket.carmodel.com/images/cm-lg/137451-1.jpg`
+    },
+    {
+        id: 5,
+        model: `Monza`,
+        producer: `Ferrari`,
+        timeTo100Kmh: 2.9,
+        horsePover: 800,
+        image: `https://wroom.ru/i/cars2/ferrari_monza_1.jpg`
+    },
+    {
+        id: 6,
+        model: `Aventador SVJ`,
+        producer: `Lamborghini`,
+        timeTo100Kmh: 2.9,
+        horsePover: 770,
+        image: `https://media.fastestlaps.com/lamborghini-aventador-svj.jpg`
+    },
+    {
+        id: 7,
+        model: `Corvette ZR1`,
+        producer: `Chevrolet`,
+        timeTo100Kmh: 3.6,
+        horsePover: 765,
+        image: `https://media.fastestlaps.com/chevrolet-corvette-zr1-25.jpg`
+    },
+    {
+        id: 8,
+        model: `DBS Superleggera`,
+        producer: `Aston Martin`,
+        timeTo100Kmh: 3.7,
+        horsePover: 735,
+        image: `https://media.fastestlaps.com/aston-martin-dbs-superleggera.jpg`
+    },
+    {
+        id: 9,
+        model: `GT-R 50 Italdesign`,
+        producer: `Nissan`,
+        timeTo100Kmh: 2.6,
+        horsePover: 772,
+        image: `https://images.drive.ru/i/0/5b434b48ec05c4c30e000024.jpg`
+    },
+    {
+        id: 10,
+        model: `919 evo`,
+        producer: `Porsche`,
+        timeTo100Kmh: 2.2,
+        horsePover: 1370,
+        image: `http://nahybride.ru/wp-content/uploads/2018/11/porsche_919_hybrid_547_019c00000ad30830-min.jpg`
+    },
+    {
+        id: 11,
+        model: `488 Pista`,
+        producer: `Ferrari`,
+        timeTo100Kmh: 2.8,
+        horsePover: 720,
+        image: `https://media.fastestlaps.com/ferrari-488-pista.jpg`
+    },
+    {
+        id: 12,
+        model: `M5 Competition`,
+        producer: `BMW`,
+        timeTo100Kmh: 3.1,
+        horsePover: 625,
+        image: `https://media.fastestlaps.com/bmw-m5-f90-competition.jpg`
+    },
+    {
+        id: 13,
+        model: `Challenger Hellcat Redeye`,
+        producer: `Dodge`,
+        timeTo100Kmh: 3.5,
+        horsePover: 727,
+        image: `https://www.seoworm.ru/super/cars/dodge_challenger_hellcat_redeye-923/photo.jpg`
+    },
+    {
+        id: 14,
+        model: `GT 4dr`,
+        producer: `Mercedes-AMG`,
+        timeTo100Kmh: 3.4,
+        horsePover: 640,
+        image: `https://cdn.motor1.com/images/mgl/lAMWN/s3/2019-mercedes-amg-gt63s-4-door.jpg`
+    },
+    {
+        id: 15,
+        model: `600LT`,
+        producer: `McLaren`,
+        timeTo100Kmh: 3.1,
+        horsePover: 600,
+        image: `https://media.fastestlaps.com/mclaren-600lt-spider.jpg`
+    }
+]
+// function addToList(cars, idTag) {
+//     let block = document.getElementById(idTag);
+//     let ul = document.createElement('ul');
+//     for (let i = 0; i < cars.length; i++) {
+//         const car = cars[i];
+//         const li = document.createElement('li');
+//         li.innerHTML = `${car.id} - ${car.producer} - ${car.model}`;
+//         ul.appendChild(li);
+//     }
+//     block.appendChild(ul);   //!Ошибка
+// }
+// addToList(carArray, container)
+
+
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали. Всі властивості авто в обному блоці
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
 // Для кожної властивості створити всередені блока автомоблія свій блок
+
+
+function add2(array, id) {
+    let newBlock = document.getElementById(id);
+    let car = document.createElement('div');
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        const carId = document.createElement("h5");
+        carId.innerHTML = `${element.id}`;
+        const carModel = document.createElement("h3");
+        carModel.innerHTML = `${element.model}`;
+        const carProducer = document.createElement("h4");
+        carProducer.innerHTML = `${element.producer}`;
+        const carTimeTo100Kmh = document.createElement("h2");
+        carTimeTo100Kmh.innerHTML = `${element.timeTo100Kmh}`;
+        const carHorsePover = document.createElement("h2");
+        carHorsePover.innerHTML = `${element.horsePover}`;
+        const carImage = document.createElement("img");
+        carImage.src = `${element.image}`;
+        car.appendChild(carId, carModel, carProducer, carTimeTo100Kmh, carHorsePover, carImage);
+    }
+    newBlock.appendChild(car);
+}
+add2(carArray, car_card);
+
+
+
+
 
 // (на основі минулого ДЗ)
 // **- функція приймає 2 масиви з рівною кількістю об'єктів та з'єднює в один об'єкт користувача та місто з відповідними "id" та "user_id",
