@@ -465,7 +465,7 @@ let users = [
 
 
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
-
+// let card_card = 'car_card';
 let carArray = [
     {
         id: 1,
@@ -589,7 +589,7 @@ let carArray = [
     }
 ]
 // function addToList(cars, idTag) {
-//     let block = document.getElementById(idTag);
+//        let block = document.getElementById(idTag);
 //     let ul = document.createElement('ul');
 //     for (let i = 0; i < cars.length; i++) {
 //         const car = cars[i];
@@ -599,7 +599,7 @@ let carArray = [
 //     }
 //     block.appendChild(ul);   //!Ошибка
 // }
-// addToList(carArray, container)
+// addToList(carArray, 'car_card')
 
 
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали. Всі властивості авто в обному блоці
@@ -607,12 +607,11 @@ let carArray = [
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
 // Для кожної властивості створити всередені блока автомоблія свій блок
 
-
 function add2(array, id) {
     let newBlock = document.getElementById(id);
     let car = document.createElement('div');
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
         const carId = document.createElement("h5");
         carId.innerHTML = `${element.id}`;
         const carModel = document.createElement("h3");
@@ -625,11 +624,16 @@ function add2(array, id) {
         carHorsePover.innerHTML = `${element.horsePover}`;
         const carImage = document.createElement("img");
         carImage.src = `${element.image}`;
-        car.appendChild(carId, carModel, carProducer, carTimeTo100Kmh, carHorsePover, carImage);
+        car.appendChild(carId);
+        car.appendChild(carModel);
+        car.appendChild(carProducer);
+        car.appendChild(carTimeTo100Kmh);
+        car.appendChild(carHorsePover);        
+        car.appendChild(carImage);        
     }
     newBlock.appendChild(car);
 }
-add2(carArray, car_card);
+add2(carArray, 'car_card');
 
 
 
