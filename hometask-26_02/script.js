@@ -107,8 +107,10 @@ swearCheck.addEventListener('click', () => {
     let word = words.value;
     for (let key of swears) {
         if (key == word) {
-            word = '';                                // Не чистит!!!!
-            alert('Ненормативна лексика!!!!')
+            words.value = "";                              
+            setTimeout(() =>{
+                alert('Ненормативна лексика!!!!')
+            },200)
         }
     }
 }
