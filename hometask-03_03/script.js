@@ -60,77 +60,124 @@
 // sleep(Math.random(100, 1000)).then(() => { console.log("d"); });
 
 
-let promise = new Promise((resolve, reject) => {
+// let promise = new Promise((resolve, reject) => {
 
-    setTimeout(() => {
-        resolve('h');
-    }, 1000);
+//     setTimeout(() => {
+//         resolve('H');
+//     }, 200);
 
-}
-);
+// }
+// );
 
-promise.then((result) => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve('h');
-        }, 1000);
-    });
-})
-    .then((result) => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                console.log(result);
-                resolve(result + 'e');
-            }, 1000);
-        });
-    }
-    )
-    .then((result /*he*/) => {
-        return new Promise(resolve => {
-            setTimeout(() => {
-                console.log(result);
-                resolve(result + 'l');
-            }, 1000);
-        });
-    })
-    .then((result) => {
-
-        return result + 'l';
-    })
-    .then(value => console.log(value));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// promise.then((result) => {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log(result);
+//             resolve(result + 'e');
+//         }, 1000);
+//     });
+// })
+//     .then((result) => {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'l');
+//             }, 900);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'l');
+//             }, 100);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'o');
+//             }, 250);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + ' ');
+//             }, 800);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 resolve(result + 'W');
+//             });
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'o');
+//             }, 600);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'r');
+//             }, 400);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'l');
+//             }, 500);
+//         });
+//     }
+//     )
+//     .then((result) => {
+//         return new Promise(resolve => {
+//             setTimeout(() => {
+//                 console.log(result);
+//                 resolve(result + 'd');
+//             }, 300);
+//         });
+//     }
+//     )
+//     .then(value => {
+//         setTimeout(() => {
+//             console.log(value);
+//         }, 250);
+//     }
+//     )
 
 
 // -за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users.
 //  За допомогою document.createElement вивести їх в браузер. 
 //  Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
 
-// fetch(`https://jsonplaceholder.typicode.com/users`)
-// .then (response => response.json())
-// .then(users =>{
-//     console.log(users);
-//     for (const item of users) {
-//         console.log(item);
+fetch(`https://jsonplaceholder.typicode.com/users`)
+.then (response => response.json())
+.then(users =>{
+    console.log(users);
+    for (const item of users) {
+        console.log(item);
 
-//     }
-// })
+    }
+})
 
 
 
