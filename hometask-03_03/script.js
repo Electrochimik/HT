@@ -31,7 +31,9 @@
 //                                     console.log(`r`);
 //                                     setTimeout(() => {
 //                                         console.log(`l`);
-//                                         setTimeout(() => { console.log(`d`); }, 300)
+//                                         setTimeout(() => {
+//                                             console.log(`d`);
+//                                         }, 300)
 //                                     }, 150)
 //                                 }, 900)
 //                             }, 200)
@@ -170,14 +172,14 @@
 //  Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
 
 fetch(`https://jsonplaceholder.typicode.com/users`)
-.then (response => response.json())
-.then(users =>{
-    console.log(users);
-    for (const item of users) {
-        console.log(item);
+    .then(response => response.json())
+    .then(users => {
+        console.log(users);
+        for (const item of users) {
+            console.log(item);
 
-    }
-})
+        }
+    })
 
 
 
