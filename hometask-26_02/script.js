@@ -50,26 +50,26 @@
 // ]
 // // Вывести список комментариев в документ, каждый в своем блоке.
 // //  Добавьте каждому комментарию по кнопке для сворачивания его body.
-// let com = document.getElementById('com_list');
-// comments.forEach(item => {
-//     let div = document.createElement('div');
-//     let h2 = document.createElement('h2');
-//     let p = document.createElement('p');
-//     let btn = document.createElement('button');
-//     btn.innerText = `Hide`;
-//     btn.onclick = () => {
-//         p.hidden
-//             ? p.hidden = false
-//             : p.hidden = true
-//     };
-//     h2.innerText = item.title;
-//     p.innerText = item.body;
-//     div.appendChild(h2);
-//     div.appendChild(p);
-//     div.appendChild(btn);
-//     com.appendChild(div);
-// }
-// )
+let com = document.getElementById('com_list');
+comments.forEach(item => {
+    let div = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let p = document.createElement('p');
+    let btn = document.createElement('button');
+    btn.innerText = `Hide`;
+    btn.onclick = () => {
+        p.hidden
+            ? p.hidden = false
+            : p.hidden = true
+    };
+    h2.innerText = item.title;
+    p.innerText = item.body;
+    div.appendChild(h2);
+    div.appendChild(p);
+    div.appendChild(btn);
+    com.appendChild(div);
+}
+)
 
 
 // ***- Сворити масив не цензцрних слів.
